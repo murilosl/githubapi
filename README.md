@@ -1,1 +1,7 @@
-# Clean-Swift-Template-Project
+#### install command
+pod install
+
+**using**
+- Clean Swift
+-  Alamofire
+-  Snapshot
