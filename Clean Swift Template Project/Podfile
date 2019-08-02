@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Clean Swift Template Project' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'Alamofire', '~> 4.7'
+
+  # Pods for Clean Swift Template Project
+
+  target 'Clean Swift Template ProjectTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Clean Swift Template ProjectUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
