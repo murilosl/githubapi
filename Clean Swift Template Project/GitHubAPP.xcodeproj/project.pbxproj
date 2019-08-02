@@ -55,16 +55,16 @@
 		89F1F134500EDFC79EB8155A /* Pods-Clean Swift Template Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template Project.release.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template Project/Pods-Clean Swift Template Project.release.xcconfig"; sourceTree = "<group>"; };
 		B0DB545EF21927F3F02C2589 /* Pods-Clean Swift Template ProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template ProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template ProjectUITests/Pods-Clean Swift Template ProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE03B95922F4AEB500D5C316 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		BE1712F122F4789500156E42 /* Clean Swift Template Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clean Swift Template Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1712F122F4789500156E42 /* GitHubAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1712F422F4789500156E42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE1712F922F4789500156E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE1712FB22F4789600156E42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1712FE22F4789600156E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE17130022F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE17130522F4789600156E42 /* Clean Swift Template ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clean Swift Template ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE17130522F4789600156E42 /* GitHubAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17130922F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_Swift_Template_ProjectTests.swift; sourceTree = "<group>"; };
 		BE17130B22F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE17131022F4789600156E42 /* Clean Swift Template ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clean Swift Template ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE17131022F4789600156E42 /* GitHubAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17131422F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_Swift_Template_ProjectUITests.swift; sourceTree = "<group>"; };
 		BE17131622F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE17132522F478E900156E42 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -132,9 +132,9 @@
 		BE1712E822F4789500156E42 = {
 			isa = PBXGroup;
 			children = (
-				BE1712F322F4789500156E42 /* Clean Swift Template Project */,
-				BE17130822F4789600156E42 /* Clean Swift Template ProjectTests */,
-				BE17131322F4789600156E42 /* Clean Swift Template ProjectUITests */,
+				BE1712F322F4789500156E42 /* GitHubAPP */,
+				BE17130822F4789600156E42 /* GitHubAPPTests */,
+				BE17131322F4789600156E42 /* GitHubAPPUITests */,
 				BE1712F222F4789500156E42 /* Products */,
 				DA3777E297BC9305C21A066D /* Pods */,
 				05FCE985C60972D73FC2782E /* Frameworks */,
@@ -144,14 +144,14 @@
 		BE1712F222F4789500156E42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE1712F122F4789500156E42 /* Clean Swift Template Project.app */,
-				BE17130522F4789600156E42 /* Clean Swift Template ProjectTests.xctest */,
-				BE17131022F4789600156E42 /* Clean Swift Template ProjectUITests.xctest */,
+				BE1712F122F4789500156E42 /* GitHubAPP.app */,
+				BE17130522F4789600156E42 /* GitHubAPPTests.xctest */,
+				BE17131022F4789600156E42 /* GitHubAPPUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE1712F322F4789500156E42 /* Clean Swift Template Project */ = {
+		BE1712F322F4789500156E42 /* GitHubAPP */ = {
 			isa = PBXGroup;
 			children = (
 				BE03B95822F4AE9B00D5C316 /* Extensions */,
@@ -162,25 +162,25 @@
 				BE1712F422F4789500156E42 /* AppDelegate.swift */,
 				BE17130022F4789600156E42 /* Info.plist */,
 			);
-			path = "Clean Swift Template Project";
+			path = GitHubAPP;
 			sourceTree = "<group>";
 		};
-		BE17130822F4789600156E42 /* Clean Swift Template ProjectTests */ = {
+		BE17130822F4789600156E42 /* GitHubAPPTests */ = {
 			isa = PBXGroup;
 			children = (
 				BE17130922F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift */,
 				BE17130B22F4789600156E42 /* Info.plist */,
 			);
-			path = "Clean Swift Template ProjectTests";
+			path = GitHubAPPTests;
 			sourceTree = "<group>";
 		};
-		BE17131322F4789600156E42 /* Clean Swift Template ProjectUITests */ = {
+		BE17131322F4789600156E42 /* GitHubAPPUITests */ = {
 			isa = PBXGroup;
 			children = (
 				BE17131422F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift */,
 				BE17131622F4789600156E42 /* Info.plist */,
 			);
-			path = "Clean Swift Template ProjectUITests";
+			path = GitHubAPPUITests;
 			sourceTree = "<group>";
 		};
 		BE17132222F478A300156E42 /* Scenes */ = {
@@ -257,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE1712F022F4789500156E42 /* Clean Swift Template Project */ = {
+		BE1712F022F4789500156E42 /* GitHubAPP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE17131922F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template Project" */;
+			buildConfigurationList = BE17131922F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPP" */;
 			buildPhases = (
 				B16A89C6ACA671778D0D353F /* [CP] Check Pods Manifest.lock */,
 				BE1712ED22F4789500156E42 /* Sources */,
@@ -271,14 +271,14 @@
 			);
 			dependencies = (
 			);
-			name = "Clean Swift Template Project";
+			name = GitHubAPP;
 			productName = "Clean Swift Template Project";
-			productReference = BE1712F122F4789500156E42 /* Clean Swift Template Project.app */;
+			productReference = BE1712F122F4789500156E42 /* GitHubAPP.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BE17130422F4789600156E42 /* Clean Swift Template ProjectTests */ = {
+		BE17130422F4789600156E42 /* GitHubAPPTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE17131C22F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template ProjectTests" */;
+			buildConfigurationList = BE17131C22F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPPTests" */;
 			buildPhases = (
 				1F449D36928C3BB7E3A836D4 /* [CP] Check Pods Manifest.lock */,
 				BE17130122F4789600156E42 /* Sources */,
@@ -290,14 +290,14 @@
 			dependencies = (
 				BE17130722F4789600156E42 /* PBXTargetDependency */,
 			);
-			name = "Clean Swift Template ProjectTests";
+			name = GitHubAPPTests;
 			productName = "Clean Swift Template ProjectTests";
-			productReference = BE17130522F4789600156E42 /* Clean Swift Template ProjectTests.xctest */;
+			productReference = BE17130522F4789600156E42 /* GitHubAPPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE17130F22F4789600156E42 /* Clean Swift Template ProjectUITests */ = {
+		BE17130F22F4789600156E42 /* GitHubAPPUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE17131F22F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template ProjectUITests" */;
+			buildConfigurationList = BE17131F22F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPPUITests" */;
 			buildPhases = (
 				E854148A5968FA68FED22EFA /* [CP] Check Pods Manifest.lock */,
 				BE17130C22F4789600156E42 /* Sources */,
@@ -309,9 +309,9 @@
 			dependencies = (
 				BE17131222F4789600156E42 /* PBXTargetDependency */,
 			);
-			name = "Clean Swift Template ProjectUITests";
+			name = GitHubAPPUITests;
 			productName = "Clean Swift Template ProjectUITests";
-			productReference = BE17131022F4789600156E42 /* Clean Swift Template ProjectUITests.xctest */;
+			productReference = BE17131022F4789600156E42 /* GitHubAPPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +337,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE1712EC22F4789500156E42 /* Build configuration list for PBXProject "Clean Swift Template Project" */;
+			buildConfigurationList = BE1712EC22F4789500156E42 /* Build configuration list for PBXProject "GitHubAPP" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -350,9 +350,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE1712F022F4789500156E42 /* Clean Swift Template Project */,
-				BE17130422F4789600156E42 /* Clean Swift Template ProjectTests */,
-				BE17130F22F4789600156E42 /* Clean Swift Template ProjectUITests */,
+				BE1712F022F4789500156E42 /* GitHubAPP */,
+				BE17130422F4789600156E42 /* GitHubAPPTests */,
+				BE17130F22F4789600156E42 /* GitHubAPPUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -512,12 +512,12 @@
 /* Begin PBXTargetDependency section */
 		BE17130722F4789600156E42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE1712F022F4789500156E42 /* Clean Swift Template Project */;
+			target = BE1712F022F4789500156E42 /* GitHubAPP */;
 			targetProxy = BE17130622F4789600156E42 /* PBXContainerItemProxy */;
 		};
 		BE17131222F4789600156E42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE1712F022F4789500156E42 /* Clean Swift Template Project */;
+			target = BE1712F022F4789500156E42 /* GitHubAPP */;
 			targetProxy = BE17131122F4789600156E42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -664,12 +664,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template Project/Info.plist";
+				INFOPLIST_FILE = GitHubAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -682,12 +682,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template Project/Info.plist";
+				INFOPLIST_FILE = GitHubAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,7 +711,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clean Swift Template Project.app/Clean Swift Template Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubAPP.app/GitHubAPP";
 			};
 			name = Debug;
 		};
@@ -732,7 +732,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clean Swift Template Project.app/Clean Swift Template Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubAPP.app/GitHubAPP";
 			};
 			name = Release;
 		};
@@ -779,7 +779,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE1712EC22F4789500156E42 /* Build configuration list for PBXProject "Clean Swift Template Project" */ = {
+		BE1712EC22F4789500156E42 /* Build configuration list for PBXProject "GitHubAPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE17131722F4789600156E42 /* Debug */,
@@ -788,7 +788,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE17131922F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template Project" */ = {
+		BE17131922F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE17131A22F4789600156E42 /* Debug */,
@@ -797,7 +797,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE17131C22F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template ProjectTests" */ = {
+		BE17131C22F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPPTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE17131D22F4789600156E42 /* Debug */,
@@ -806,7 +806,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE17131F22F4789600156E42 /* Build configuration list for PBXNativeTarget "Clean Swift Template ProjectUITests" */ = {
+		BE17131F22F4789600156E42 /* Build configuration list for PBXNativeTarget "GitHubAPPUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE17132022F4789600156E42 /* Debug */,
