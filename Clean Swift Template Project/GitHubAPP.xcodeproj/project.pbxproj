@@ -14,8 +14,8 @@
 		BE1712FA22F4789500156E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1712F822F4789500156E42 /* Main.storyboard */; };
 		BE1712FC22F4789600156E42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1712FB22F4789600156E42 /* Assets.xcassets */; };
 		BE1712FF22F4789600156E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1712FD22F4789600156E42 /* LaunchScreen.storyboard */; };
-		BE17130A22F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17130922F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift */; };
-		BE17131522F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17131422F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift */; };
+		BE17130A22F4789600156E42 /* GitHubAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17130922F4789600156E42 /* GitHubAPPTests.swift */; };
+		BE17131522F4789600156E42 /* GitHubAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17131422F4789600156E42 /* GitHubAPPUITests.swift */; };
 		BE17132B22F478E900156E42 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17132522F478E900156E42 /* MainPresenter.swift */; };
 		BE17132C22F478E900156E42 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17132622F478E900156E42 /* MainWorker.swift */; };
 		BE17132D22F478E900156E42 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17132722F478E900156E42 /* MainRouter.swift */; };
@@ -62,10 +62,10 @@
 		BE1712FE22F4789600156E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE17130022F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE17130522F4789600156E42 /* GitHubAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE17130922F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_Swift_Template_ProjectTests.swift; sourceTree = "<group>"; };
+		BE17130922F4789600156E42 /* GitHubAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPPTests.swift; sourceTree = "<group>"; };
 		BE17130B22F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE17131022F4789600156E42 /* GitHubAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE17131422F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_Swift_Template_ProjectUITests.swift; sourceTree = "<group>"; };
+		BE17131422F4789600156E42 /* GitHubAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPPUITests.swift; sourceTree = "<group>"; };
 		BE17131622F4789600156E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE17132522F478E900156E42 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BE17132622F478E900156E42 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		BE17130822F4789600156E42 /* GitHubAPPTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE17130922F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift */,
+				BE17130922F4789600156E42 /* GitHubAPPTests.swift */,
 				BE17130B22F4789600156E42 /* Info.plist */,
 			);
 			path = GitHubAPPTests;
@@ -177,7 +177,7 @@
 		BE17131322F4789600156E42 /* GitHubAPPUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BE17131422F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift */,
+				BE17131422F4789600156E42 /* GitHubAPPUITests.swift */,
 				BE17131622F4789600156E42 /* Info.plist */,
 			);
 			path = GitHubAPPUITests;
@@ -495,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE17130A22F4789600156E42 /* Clean_Swift_Template_ProjectTests.swift in Sources */,
+				BE17130A22F4789600156E42 /* GitHubAPPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE17131522F4789600156E42 /* Clean_Swift_Template_ProjectUITests.swift in Sources */,
+				BE17131522F4789600156E42 /* GitHubAPPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 //
-//  Clean_Swift_Template_ProjectTests.swift
-//  Clean Swift Template ProjectTests
+//  GitHubAPPTests.swift
+//  
 //
 //  Created by Murilo de Souza Lopes on 02/08/19.
 //  Copyright © 2019 Murilo de Souza Lopes. All rights reserved.
 //
 
 import XCTest
-@testable import Clean_Swift_Template_Project
+@testable import GitHubAPP
 
 class Clean_Swift_Template_ProjectTests: XCTestCase {
 

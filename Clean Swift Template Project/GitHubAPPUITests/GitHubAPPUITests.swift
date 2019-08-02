@@ -1,6 +1,6 @@
 //
-//  Clean_Swift_Template_ProjectUITests.swift
-//  Clean Swift Template ProjectUITests
+//  GitHubAPPUITests.swift
+//  
 //
 //  Created by Murilo de Souza Lopes on 02/08/19.
 //  Copyright © 2019 Murilo de Souza Lopes. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Clean_Swift_Template_ProjectUITests: XCTestCase {
+class GitHubAPPUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
