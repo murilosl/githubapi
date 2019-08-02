@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/murilosl/Projects/githubapi/Clean Swift Template Project/GitHubAPP.xcodeproj">
+      location = "group:GitHubAPP.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
