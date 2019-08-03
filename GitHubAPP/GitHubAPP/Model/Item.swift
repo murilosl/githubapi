@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct ItemRoot: Codable{
+struct ItemRoot: Codable {
     let items: [Item]
 }
 
-struct Item: Codable{
+struct Item: Codable {
     let full_name: String
     let owner: Owner
     let stargazers_count: Int
 }
 
-struct Owner: Codable{
+struct Owner: Codable {
     let login: String
     let avatar_url: String
 }

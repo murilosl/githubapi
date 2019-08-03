@@ -12,19 +12,16 @@
 
 import UIKit
 
-protocol MainPresentationLogic
-{
+protocol MainPresentationLogic {
     func presentSomething(response: Main.Something.Response)
 }
 
-class MainPresenter: MainPresentationLogic
-{
+class MainPresenter: MainPresentationLogic {
     weak var viewController: MainDisplayLogic?
-    
+
     // MARK: Do something
-    
-    func presentSomething(response: Main.Something.Response)
-    {
+
+    func presentSomething(response: Main.Something.Response) {
         let viewModel = Main.Something.ViewModel(item: response.item)
         viewController?.displaySomething(viewModel: viewModel)
     }

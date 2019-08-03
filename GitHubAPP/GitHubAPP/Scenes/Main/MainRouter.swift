@@ -12,23 +12,20 @@
 
 import UIKit
 
-@objc protocol MainRoutingLogic
-{
+@objc protocol MainRoutingLogic {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol MainDataPassing
-{
+protocol MainDataPassing {
     var dataStore: MainDataStore? { get }
 }
 
-class MainRouter: NSObject, MainRoutingLogic, MainDataPassing
-{
+class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
     weak var viewController: MainViewController?
     var dataStore: MainDataStore?
-    
+
     // MARK: Routing
-    
+
     //func routeToSomewhere(segue: UIStoryboardSegue?)
     //{
     //  if let segue = segue {
@@ -43,16 +40,16 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing
     //    navigateToSomewhere(source: viewController!, destination: destinationVC)
     //  }
     //}
-    
+
     // MARK: Navigation
-    
+
     //func navigateToSomewhere(source: MainViewController, destination: SomewhereViewController)
     //{
     //  source.show(destination, sender: nil)
     //}
-    
+
     // MARK: Passing data
-    
+
     //func passDataToSomewhere(source: MainDataStore, destination: inout SomewhereDataStore)
     //{
     //  destination.name = source.name

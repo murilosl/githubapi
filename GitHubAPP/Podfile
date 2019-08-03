@@ -6,7 +6,7 @@ target 'GitHubAPP' do
   use_frameworks!
   
   pod 'Alamofire', '~> 4.7'
-
+  pod 'SwiftLint'
 
   target 'GitHubAPPTests' do
     inherit! :search_paths

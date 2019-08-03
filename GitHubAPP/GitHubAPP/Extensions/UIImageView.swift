@@ -20,11 +20,11 @@ extension UIImageView {
                     }
                 }
             }
-            
+
         }
     }
-    
-    func configureUI(){
+
+    func configureUI() {
         let color = UIColor(displayP3Red: 244, green: 242, blue: 240, alpha: 0)
         self.layer.borderColor = color.cgColor
         self.layer.borderWidth = 2

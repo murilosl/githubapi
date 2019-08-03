@@ -9,24 +9,24 @@
 import Foundation
 import Alamofire
 
-typealias APIResultTypeAlias = ([Item]?) -> ()
+typealias APIResultTypeAlias = ([Item]?) -> Void
 
-class APIRequest{
-    
-    func open(url: String, completion: @escaping APIResultTypeAlias){
+class APIRequest {
 
-         Alamofire.request(url).responseData{ (result) in
-            if let dataReturn = result.value{
-                
+    func open(url: String, completion: @escaping APIResultTypeAlias) {
+
+         Alamofire.request(url).responseData { (result) in
+            if let dataReturn = result.value {
+
                 do {
                     let json = JSONDecoder()
                     let itemsParse = try json.decode(ItemRoot.self, from: dataReturn)
-                    
+
                     completion(itemsParse.items)
-                }catch{
-                    
+                } catch {
+
                 }
-            }else{
+            } else {
 
             }
         }

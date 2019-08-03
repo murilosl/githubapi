@@ -12,37 +12,32 @@
 
 import UIKit
 
-protocol MainBusinessLogic
-{
+protocol MainBusinessLogic {
     func doSomething(request: Main.Something.Request)
     var item: Item? {get set }
 }
 
-protocol MainDataStore
-{
+protocol MainDataStore {
     var item: Item? {get set}
 }
 
-class MainInteractor: MainBusinessLogic, MainDataStore
-{
-    
+class MainInteractor: MainBusinessLogic, MainDataStore {
+
     var item: Item?
-    
+
     var presenter: MainPresentationLogic?
     var worker: MainWorker?
     //var name: String = ""
-    
+
     // MARK: Do something
-    
-    func doSomething(request: Main.Something.Request)
-    {
+
+    func doSomething(request: Main.Something.Request) {
         worker = MainWorker()
-        
+
         worker?.getItems(completion: { (result) in
             let response = Main.Something.Response(item: result!)
             self.presenter?.presentSomething(response: response)
         })
-        
-        
+
     }
 }
