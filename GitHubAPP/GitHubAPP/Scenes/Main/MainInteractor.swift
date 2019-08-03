@@ -27,7 +27,6 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
 
     var presenter: MainPresentationLogic?
     var worker: MainWorker?
-    //var name: String = ""
 
     // MARK: Do something
 

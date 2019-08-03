@@ -28,6 +28,9 @@
 		BE17133C22F48FD000156E42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133B22F48FD000156E42 /* MainView.swift */; };
 		BE17133E22F4922500156E42 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133D22F4922500156E42 /* MainTableViewCell.swift */; };
 		BE763C1422F4E56000C38B0B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE763C1322F4E56000C38B0B /* UIImageView.swift */; };
+		BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */; };
+		BEDF82E022F6326C0051CA8E /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDF82DF22F6326C0051CA8E /* load.gif */; };
+		BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */; };
 		DE62F634A014A76AD94C38BC /* Pods_GitHubAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531043EA5583037EB716C295 /* Pods_GitHubAPPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,9 @@
 		BE17133B22F48FD000156E42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BE17133D22F4922500156E42 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BE763C1322F4E56000C38B0B /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		BEDF82DF22F6326C0051CA8E /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = load.gif; path = ../../../../../../../Documents/load.gif; sourceTree = "<group>"; };
+		BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIImage+Gif.swift"; sourceTree = "<group>"; };
 		C16616CC5C8749A9BF442E5D /* Pods-GitHubAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPP.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPP/Pods-GitHubAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C39075F4802B928ACAF06811 /* Pods-Clean Swift Template Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template Project.debug.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template Project/Pods-Clean Swift Template Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C85F90E571EF5D26461DC952 /* Pods-GitHubAPPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			children = (
 				BE03B95922F4AEB500D5C316 /* UIView.swift */,
 				BE763C1322F4E56000C38B0B /* UIImageView.swift */,
+				BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,8 +251,10 @@
 		BE17133A22F48E5A00156E42 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF82DF22F6326C0051CA8E /* load.gif */,
 				BE17133B22F48FD000156E42 /* MainView.swift */,
 				BE17133D22F4922500156E42 /* MainTableViewCell.swift */,
+				BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF82E022F6326C0051CA8E /* load.gif in Resources */,
 				BE1712FF22F4789600156E42 /* LaunchScreen.storyboard in Resources */,
 				BE1712FC22F4789600156E42 /* Assets.xcassets in Resources */,
 				BE1712FA22F4789500156E42 /* Main.storyboard in Resources */,
@@ -515,6 +525,7 @@
 				BE17133722F47D7400156E42 /* Item.swift in Sources */,
 				BE17132D22F478E900156E42 /* MainRouter.swift in Sources */,
 				BE17132E22F478E900156E42 /* MainModels.swift in Sources */,
+				BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */,
 				BE17132B22F478E900156E42 /* MainPresenter.swift in Sources */,
 				BE17133922F4885200156E42 /* Constants.swift in Sources */,
 				BE17132C22F478E900156E42 /* MainWorker.swift in Sources */,
@@ -523,6 +534,7 @@
 				BE17133322F47A7000156E42 /* APIRequest.swift in Sources */,
 				BE17133E22F4922500156E42 /* MainTableViewCell.swift in Sources */,
 				BE17133022F478E900156E42 /* MainInteractor.swift in Sources */,
+				BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

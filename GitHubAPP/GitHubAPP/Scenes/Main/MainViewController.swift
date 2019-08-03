@@ -21,6 +21,8 @@ class MainViewController: UIViewController, MainDisplayLogic {
     var router: (NSObjectProtocol & MainRoutingLogic & MainDataPassing)?
     var items: [Item] = []
     let mainView = MainView()
+    var refreshControl = UIRefreshControl()
+    var refreshView: RefreshView!
 
     // MARK: Object lifecycle
 
@@ -72,6 +74,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
         setupMainView()
 
         doInit()
+        refreshSetup()
     }
 
     func setupMainView() {
@@ -80,6 +83,34 @@ class MainViewController: UIViewController, MainDisplayLogic {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
     }
+    
+    //MARK: Refresh Controll
+    
+    func refreshSetup(){
+        //refreshControl.attributedTitle = NSAttributedString(string: "Carregando")
+        refreshControl.backgroundColor = .clear
+        refreshControl.tintColor = .clear
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        mainView.tableView.refreshControl = refreshControl
+    }
+    
+    
+    @objc func refresh(sender:AnyObject) {
+        getRefereshView()
+        let request = Main.Something.Request()
+        interactor?.doSomething(request: request)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.mainView.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    func getRefereshView() {
+        refreshView = RefreshView()
+        refreshView.frame = refreshControl.frame
+        refreshControl.add(refreshView)
+    }
+    
 
     // MARK: Do something
 
