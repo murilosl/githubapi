@@ -13,7 +13,7 @@ struct ItemRoot: Codable{
 }
 
 struct Item: Codable{
-    let name: String
+    let full_name: String
     let owner: Owner
     let stargazers_count: Int
 }

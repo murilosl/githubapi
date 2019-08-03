@@ -120,7 +120,7 @@ extension MainViewController: UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idCell, for: indexPath) as? MainTableViewCell{
             
             let item = items[indexPath.row]
-            cell.textLabel?.text = item.name
+            cell.populate(item: item)
             
             return cell
         }else{

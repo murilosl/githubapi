@@ -27,6 +27,7 @@
 		BE17133922F4885200156E42 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133822F4885200156E42 /* Constants.swift */; };
 		BE17133C22F48FD000156E42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133B22F48FD000156E42 /* MainView.swift */; };
 		BE17133E22F4922500156E42 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133D22F4922500156E42 /* MainTableViewCell.swift */; };
+		BE763C1422F4E56000C38B0B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE763C1322F4E56000C38B0B /* UIImageView.swift */; };
 		DE62F634A014A76AD94C38BC /* Pods_GitHubAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531043EA5583037EB716C295 /* Pods_GitHubAPPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		BE17133822F4885200156E42 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE17133B22F48FD000156E42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BE17133D22F4922500156E42 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		BE763C1322F4E56000C38B0B /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		C16616CC5C8749A9BF442E5D /* Pods-GitHubAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPP.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPP/Pods-GitHubAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C39075F4802B928ACAF06811 /* Pods-Clean Swift Template Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template Project.debug.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template Project/Pods-Clean Swift Template Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C85F90E571EF5D26461DC952 /* Pods-GitHubAPPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BE03B95922F4AEB500D5C316 /* UIView.swift */,
+				BE763C1322F4E56000C38B0B /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			files = (
 				BE03B95A22F4AEB500D5C316 /* UIView.swift in Sources */,
 				BE17132F22F478E900156E42 /* MainViewController.swift in Sources */,
+				BE763C1422F4E56000C38B0B /* UIImageView.swift in Sources */,
 				BE17133722F47D7400156E42 /* Item.swift in Sources */,
 				BE17132D22F478E900156E42 /* MainRouter.swift in Sources */,
 				BE17132E22F478E900156E42 /* MainModels.swift in Sources */,

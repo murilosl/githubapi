@@ -17,7 +17,7 @@ class MainView: UIView {
         
         super.init(frame: frame)
         
-        setupComponents()
+        setupUI()
         setupConstraints()
     }
     
@@ -26,7 +26,7 @@ class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupComponents() {
+    func setupUI() {
         add(tableView)
     }
     
