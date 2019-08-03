@@ -2,6 +2,7 @@
 pod install
 
 **using**
-- Clean Swift
+-  Clean Swift
 -  Alamofire
 -  Snapshot
+-  SwiftLint
