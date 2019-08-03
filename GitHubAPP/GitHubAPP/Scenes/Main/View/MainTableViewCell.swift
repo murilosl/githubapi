@@ -1,6 +1,6 @@
 //
 //  MainTableViewCell.swift
-//  Clean Swift Template Project
+//  GitHubAPP
 //
 //  Created by Murilo de Souza Lopes on 02/08/19.
 //  Copyright © 2019 Murilo de Souza Lopes. All rights reserved.
@@ -82,10 +82,10 @@ class MainTableViewCell: UITableViewCell {
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v1": fullNameLabel]))
         
-         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2": nameLabel]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v3]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v3": starButton]))
-
+        
         
         imageAuthor.translatesAutoresizingMaskIntoConstraints = false
         imageAuthor.heightAnchor.constraint(equalToConstant: 15).isActive = true
