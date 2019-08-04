@@ -30,11 +30,11 @@ enum Main {
         struct Request {
             let item: Item
         }
-        
+
         struct Response {
             let item: Item
         }
-        
+
         struct ViewModel {
             let item: Item
         }

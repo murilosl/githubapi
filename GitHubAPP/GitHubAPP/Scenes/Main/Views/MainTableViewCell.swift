@@ -53,7 +53,7 @@ class MainTableViewCell: UITableViewCell {
     }
 
     // MARK: - Setup UI
-    
+
     func setupUI() {
         contentView.add(nameLabel)
         contentView.add(fullNameLabel)
@@ -77,7 +77,7 @@ class MainTableViewCell: UITableViewCell {
     }
 
     // MARK: - Setup Constraints
-    
+
     func setupConstraints() {
 
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0(40)]-8-[v1(140)]-8-[v2(80)]-8-[v3(80)]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": imageAuthor, "v1": fullNameLabel, "v2": nameLabel, "v3": starButton]))
@@ -95,5 +95,5 @@ class MainTableViewCell: UITableViewCell {
         imageAuthor.widthAnchor.constraint(equalToConstant: 15).isActive = true
 
     }
-    
+
 }

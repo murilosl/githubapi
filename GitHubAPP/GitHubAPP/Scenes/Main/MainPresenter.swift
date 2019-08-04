@@ -18,7 +18,7 @@ protocol MainPresentationLogic {
 }
 
 class MainPresenter: MainPresentationLogic {
-    
+
     weak var viewController: MainDisplayLogic?
 
     // MARK: Do something
@@ -27,7 +27,7 @@ class MainPresenter: MainPresentationLogic {
         let viewModel = Main.Something.ViewModel(item: response.item)
         viewController?.displaySomething(viewModel: viewModel)
     }
-    
+
     func presentRepo(response: Main.Repo.Response) {
         let viewModel = Main.Repo.ViewModel(item: response.item)
         viewController?.displayRepo(viewModel: viewModel)

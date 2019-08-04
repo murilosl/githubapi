@@ -24,8 +24,6 @@ protocol MainDataStore {
 
 class MainInteractor: MainBusinessLogic, MainDataStore {
 
-    
-
     var item: Item?
 
     var presenter: MainPresentationLogic?
@@ -42,7 +40,7 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
         })
 
     }
-    
+
     func loadRepo(request: Main.Repo.Request) {
         let itemRequest = request.item
         item = itemRequest

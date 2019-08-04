@@ -12,23 +12,20 @@
 
 import UIKit
 
-@objc protocol RepoRoutingLogic
-{
+@objc protocol RepoRoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol RepoDataPassing
-{
+protocol RepoDataPassing {
   var dataStore: RepoDataStore? { get }
 }
 
-class RepoRouter: NSObject, RepoRoutingLogic, RepoDataPassing
-{
+class RepoRouter: NSObject, RepoRoutingLogic, RepoDataPassing {
   weak var viewController: RepoViewController?
   var dataStore: RepoDataStore?
-  
+
   // MARK: Routing
-  
+
   //func routeToSomewhere(segue: UIStoryboardSegue?)
   //{
   //  if let segue = segue {
@@ -45,14 +42,14 @@ class RepoRouter: NSObject, RepoRoutingLogic, RepoDataPassing
   //}
 
   // MARK: Navigation
-  
+
   //func navigateToSomewhere(source: RepoViewController, destination: SomewhereViewController)
   //{
   //  source.show(destination, sender: nil)
   //}
-  
+
   // MARK: Passing data
-  
+
   //func passDataToSomewhere(source: RepoDataStore, destination: inout SomewhereDataStore)
   //{
   //  destination.name = source.name

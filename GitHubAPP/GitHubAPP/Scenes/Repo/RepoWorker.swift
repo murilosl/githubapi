@@ -12,9 +12,7 @@
 
 import UIKit
 
-class RepoWorker
-{
-  func doSomeWork()
-  {
-  }
+class RepoWorker {
+    func doSomeWork() {
+    }
 }

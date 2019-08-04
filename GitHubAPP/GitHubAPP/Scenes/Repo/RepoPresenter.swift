@@ -12,20 +12,17 @@
 
 import UIKit
 
-protocol RepoPresentationLogic
-{
-  func presentSomething(response: Repo.Something.Response)
+protocol RepoPresentationLogic {
+    func presentSomething(response: Repo.Something.Response)
 }
 
-class RepoPresenter: RepoPresentationLogic
-{
-  weak var viewController: RepoDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: Repo.Something.Response)
-  {
-    let viewModel = Repo.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+class RepoPresenter: RepoPresentationLogic {
+    weak var viewController: RepoDisplayLogic?
+
+    // MARK: Do something
+
+    func presentSomething(response: Repo.Something.Response) {
+        let viewModel = Repo.Something.ViewModel()
+        viewController?.displaySomething(viewModel: viewModel)
+    }
 }

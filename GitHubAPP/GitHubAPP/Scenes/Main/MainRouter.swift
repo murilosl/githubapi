@@ -21,28 +21,26 @@ protocol MainDataPassing {
 }
 
 class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
-    
+
     weak var viewController: MainViewController?
     var dataStore: MainDataStore?
-    
+
     func routeToRepo() {
         let destinationVC = RepoViewController()
         var destinationDS = destinationVC.router?.dataStore
         passDataToRepo(source: dataStore!, destination: &destinationDS!)
         navigateToRepo(source: viewController!, destination: destinationVC)
     }
-    
+
     // MARK: Navigation
-    
-    func navigateToRepo(source: MainViewController, destination: RepoViewController)
-    {
+
+    func navigateToRepo(source: MainViewController, destination: RepoViewController) {
         source.show(destination, sender: nil)
     }
-    
+
     // MARK: Passing data
-    
-    func passDataToRepo(source: MainDataStore, destination: inout RepoDataStore)
-    {
+
+    func passDataToRepo(source: MainDataStore, destination: inout RepoDataStore) {
         destination.item = source.item!
     }
 }

@@ -24,21 +24,22 @@ class MainViewController: UIViewController, MainDisplayLogic {
     let mainView = MainView()
     var refreshControl = UIRefreshControl()
     var refreshView: RefreshView!
-    
+    var fetchingMore = false
+
     // MARK: Object lifecycle
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     // MARK: Setup
-    
+
     private func setup() {
         let viewController = self
         let interactor = MainInteractor()
@@ -51,9 +52,9 @@ class MainViewController: UIViewController, MainDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: Routing
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
@@ -62,106 +63,139 @@ class MainViewController: UIViewController, MainDisplayLogic {
             }
         }
     }
-    
+
     // MARK: View lifecycle
-    
+
     override func loadView() {
         view = mainView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupMainView()
-        
+
         doInit()
         refreshSetup()
     }
-    
+
     func setupMainView() {
         title = "Github API"
         mainView.tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.idCell)
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
     }
-    
-    //MARK: Refresh Controll
-    
-    func refreshSetup(){
+
+    // MARK: Refresh Controll
+
+    func refreshSetup() {
         //refreshControl.attributedTitle = NSAttributedString(string: "Carregando")
         refreshControl.backgroundColor = .clear
         refreshControl.tintColor = .clear
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         mainView.tableView.refreshControl = refreshControl
     }
-    
-    
-    @objc func refresh(sender:AnyObject) {
+
+    @objc func refresh(sender: AnyObject) {
         getRefereshView()
         let request = Main.Something.Request()
         interactor?.doSomething(request: request)
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.mainView.tableView.refreshControl?.endRefreshing()
         }
     }
-    
+
     func getRefereshView() {
         refreshView = RefreshView()
         refreshView.frame = refreshControl.frame
         refreshControl.add(refreshView)
     }
-    
-    
+
     // MARK: Do something
-    
+
     //@IBOutlet weak var nameTextField: UITextField!
-    
+
     func doInit() {
         let request = Main.Something.Request()
         interactor?.doSomething(request: request)
     }
-    
+
     func displaySomething(viewModel: Main.Something.ViewModel) {
         items = viewModel.item
         mainView.tableView.reloadData()
     }
-    
+
     func displayRepo(viewModel: Main.Repo.ViewModel) {
         router?.routeToRepo()
     }
 }
 
 extension MainViewController: UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        if section == 0 {
+            return items.count
+        } else if section == 1 && fetchingMore {
+            return 1
+        }
+        return 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idCell, for: indexPath) as? MainTableViewCell {
-            
-            let item = items[indexPath.row]
-            cell.populate(item: item)
-            
-            return cell
-        } else {
+        if indexPath.section == 0{
+            if let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idCell, for: indexPath) as? MainTableViewCell {
+                
+                let item = items[indexPath.row]
+                cell.populate(item: item)
+                
+                return cell
+            } else {
+                return UITableViewCell()
+            }
+        }else{
             return UITableViewCell()
         }
+        
     }
-    
+
 }
 
 extension MainViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         let request = Main.Repo.Request(item: item)
         interactor?.loadRepo(request: request)
+        mainView.tableView.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        
+        if offsetY > contentHeight - scrollView.frame.height * 4 {
+            if !fetchingMore {
+                beginBatchFetch()
+            }
+            
+        }
+    }
+    
+    func beginBatchFetch() {
+        fetchingMore = true
+        print("beginBatchFetch!")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
+            let request = Main.Something.Request()
+            self.interactor?.doSomething(request: request)
+            self.mainView.tableView.reloadData()
+        })
     }
 }
