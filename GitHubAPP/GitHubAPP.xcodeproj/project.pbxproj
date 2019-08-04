@@ -28,6 +28,10 @@
 		BE17133C22F48FD000156E42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133B22F48FD000156E42 /* MainView.swift */; };
 		BE17133E22F4922500156E42 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17133D22F4922500156E42 /* MainTableViewCell.swift */; };
 		BE763C1422F4E56000C38B0B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE763C1322F4E56000C38B0B /* UIImageView.swift */; };
+		BE7E3C6122F69B2F0096A284 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C5D22F69B2F0096A284 /* MainViewControllerTests.swift */; };
+		BE7E3C6222F69B2F0096A284 /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C5E22F69B2F0096A284 /* MainInteractorTests.swift */; };
+		BE7E3C6322F69B2F0096A284 /* MainWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C5F22F69B2F0096A284 /* MainWorkerTests.swift */; };
+		BE7E3C6422F69B2F0096A284 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C6022F69B2F0096A284 /* MainPresenterTests.swift */; };
 		BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */; };
 		BEDF82E022F6326C0051CA8E /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDF82DF22F6326C0051CA8E /* load.gif */; };
 		BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */; };
@@ -38,10 +42,8 @@
 		BEDF82F022F65CB30051CA8E /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82EA22F65CB30051CA8E /* RepoViewController.swift */; };
 		BEDF82F122F65CB30051CA8E /* RepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82EB22F65CB30051CA8E /* RepoInteractor.swift */; };
 		BEDF82F422F666470051CA8E /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F322F666470051CA8E /* RepoView.swift */; };
-		BEDF82FA22F68EE60051CA8E /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F622F68EE60051CA8E /* MainViewControllerTests.swift */; };
-		BEDF82FB22F68EE60051CA8E /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F722F68EE60051CA8E /* MainInteractorTests.swift */; };
-		BEDF82FC22F68EE60051CA8E /* MainWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F822F68EE60051CA8E /* MainWorkerTests.swift */; };
-		BEDF82FD22F68EE60051CA8E /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F922F68EE60051CA8E /* MainPresenterTests.swift */; };
+		BEDF830022F68F6E0051CA8E /* ItemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82FF22F68F6E0051CA8E /* ItemMock.swift */; };
+		BEDF830322F693480051CA8E /* MainUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF830222F693480051CA8E /* MainUITest.swift */; };
 		DE62F634A014A76AD94C38BC /* Pods_GitHubAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531043EA5583037EB716C295 /* Pods_GitHubAPPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,10 @@
 		BE17133B22F48FD000156E42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BE17133D22F4922500156E42 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BE763C1322F4E56000C38B0B /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		BE7E3C5D22F69B2F0096A284 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		BE7E3C5E22F69B2F0096A284 /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
+		BE7E3C5F22F69B2F0096A284 /* MainWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorkerTests.swift; sourceTree = "<group>"; };
+		BE7E3C6022F69B2F0096A284 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
 		BEDF82DF22F6326C0051CA8E /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = load.gif; path = ../../../../../../../Documents/load.gif; sourceTree = "<group>"; };
 		BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -106,10 +112,8 @@
 		BEDF82EA22F65CB30051CA8E /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
 		BEDF82EB22F65CB30051CA8E /* RepoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInteractor.swift; sourceTree = "<group>"; };
 		BEDF82F322F666470051CA8E /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
-		BEDF82F622F68EE60051CA8E /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
-		BEDF82F722F68EE60051CA8E /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
-		BEDF82F822F68EE60051CA8E /* MainWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorkerTests.swift; sourceTree = "<group>"; };
-		BEDF82F922F68EE60051CA8E /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		BEDF82FF22F68F6E0051CA8E /* ItemMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMock.swift; sourceTree = "<group>"; };
+		BEDF830222F693480051CA8E /* MainUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITest.swift; sourceTree = "<group>"; };
 		C16616CC5C8749A9BF442E5D /* Pods-GitHubAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPP.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPP/Pods-GitHubAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C39075F4802B928ACAF06811 /* Pods-Clean Swift Template Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template Project.debug.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template Project/Pods-Clean Swift Template Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C85F90E571EF5D26461DC952 /* Pods-GitHubAPPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 		BE17131322F4789600156E42 /* GitHubAPPUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF830122F6926A0051CA8E /* Main */,
 				BE17131422F4789600156E42 /* GitHubAPPUITests.swift */,
 				BE17131622F4789600156E42 /* Info.plist */,
 			);
@@ -309,10 +314,10 @@
 			isa = PBXGroup;
 			children = (
 				BEDF82FE22F68EF70051CA8E /* Mock */,
-				BEDF82F622F68EE60051CA8E /* MainViewControllerTests.swift */,
-				BEDF82F722F68EE60051CA8E /* MainInteractorTests.swift */,
-				BEDF82F822F68EE60051CA8E /* MainWorkerTests.swift */,
-				BEDF82F922F68EE60051CA8E /* MainPresenterTests.swift */,
+				BE7E3C5D22F69B2F0096A284 /* MainViewControllerTests.swift */,
+				BE7E3C5E22F69B2F0096A284 /* MainInteractorTests.swift */,
+				BE7E3C5F22F69B2F0096A284 /* MainWorkerTests.swift */,
+				BE7E3C6022F69B2F0096A284 /* MainPresenterTests.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -320,8 +325,17 @@
 		BEDF82FE22F68EF70051CA8E /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF82FF22F68F6E0051CA8E /* ItemMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		BEDF830122F6926A0051CA8E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF830222F693480051CA8E /* MainUITest.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DA3777E297BC9305C21A066D /* Pods */ = {
@@ -374,6 +388,7 @@
 				BE17130122F4789600156E42 /* Sources */,
 				BE17130222F4789600156E42 /* Frameworks */,
 				BE17130322F4789600156E42 /* Resources */,
+				C9BC4EFC8A0C2EF0019E9DD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,6 +408,7 @@
 				BE17130C22F4789600156E42 /* Sources */,
 				BE17130D22F4789600156E42 /* Frameworks */,
 				BE17130E22F4789600156E42 /* Resources */,
+				34BE0D277B7EE00FA8982DD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -498,6 +514,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		34BE0D277B7EE00FA8982DD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B16A89C6ACA671778D0D353F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,6 +570,23 @@
 			shellPath = /bin/sh;
 			shellScript = "
 ";
+		};
+		C9BC4EFC8A0C2EF0019E9DD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPTests/Pods-GitHubAPPTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPTests/Pods-GitHubAPPTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubAPPTests/Pods-GitHubAPPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		D5063D60D8B38B0ABEB2DBC6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -614,11 +664,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7E3C6322F69B2F0096A284 /* MainWorkerTests.swift in Sources */,
+				BEDF830022F68F6E0051CA8E /* ItemMock.swift in Sources */,
 				BE17130A22F4789600156E42 /* GitHubAPPTests.swift in Sources */,
-				BEDF82FB22F68EE60051CA8E /* MainInteractorTests.swift in Sources */,
-				BEDF82FD22F68EE60051CA8E /* MainPresenterTests.swift in Sources */,
-				BEDF82FC22F68EE60051CA8E /* MainWorkerTests.swift in Sources */,
-				BEDF82FA22F68EE60051CA8E /* MainViewControllerTests.swift in Sources */,
+				BE7E3C6422F69B2F0096A284 /* MainPresenterTests.swift in Sources */,
+				BE7E3C6122F69B2F0096A284 /* MainViewControllerTests.swift in Sources */,
+				BE7E3C6222F69B2F0096A284 /* MainInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +677,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF830322F693480051CA8E /* MainUITest.swift in Sources */,
 				BE17131522F4789600156E42 /* GitHubAPPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,15 +874,14 @@
 			baseConfigurationReference = 854874454259A547DA5AB25B /* Pods-GitHubAPPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template ProjectTests/Info.plist";
+				INFOPLIST_FILE = GitHubAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-ProjectTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app.ProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -843,15 +894,14 @@
 			baseConfigurationReference = D0F0273BE601B4DD45E4EB7F /* Pods-GitHubAPPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template ProjectTests/Info.plist";
+				INFOPLIST_FILE = GitHubAPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-ProjectTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app.ProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -865,17 +915,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template ProjectUITests/Info.plist";
+				INFOPLIST_FILE = GitHubAPPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-ProjectUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Clean Swift Template Project";
+				TEST_TARGET_NAME = GitHubAPP;
 			};
 			name = Debug;
 		};
@@ -885,17 +936,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Clean Swift Template ProjectUITests/Info.plist";
+				INFOPLIST_FILE = GitHubAPPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cleanswift.templateproject.Clean-Swift-Template-ProjectUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.app.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Clean Swift Template Project";
+				TEST_TARGET_NAME = GitHubAPP;
 			};
 			name = Release;
 		};
