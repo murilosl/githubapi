@@ -1,6 +1,6 @@
 #### install command
-pod install
-gem install fastlane
+- pod install
+- gem install fastlane
 
 **using**
 -  Clean Swift
