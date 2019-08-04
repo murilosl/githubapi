@@ -147,20 +147,20 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idCell, for: indexPath) as? MainTableViewCell {
-                
+
                 let item = items[indexPath.row]
                 cell.populate(item: item)
-                
+
                 return cell
             } else {
                 return UITableViewCell()
             }
-        }else{
+        } else {
             return UITableViewCell()
         }
-        
+
     }
 
 }
@@ -173,21 +173,20 @@ extension MainViewController: UITableViewDelegate {
         interactor?.loadRepo(request: request)
         mainView.tableView.reloadData()
     }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        
-        
+
         if offsetY > contentHeight - scrollView.frame.height * 4 {
             if !fetchingMore {
                 beginBatchFetch()
             }
-            
+
         }
     }
-    
+
     func beginBatchFetch() {
         fetchingMore = true
         print("beginBatchFetch!")

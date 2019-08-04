@@ -26,33 +26,33 @@ public enum SocketClientResponse: Error {
 }
 
 class SocketClient: NSObject {
-    
+
     enum SocketStatus {
         case ready
         case closed
     }
-    
+
     static let connectTimeoutSeconds = 2
     static let defaultCommandTimeoutSeconds = 3_600 // Hopefully 1 hr is enough ¯\_(ツ)_/¯
     static let doneToken = "done" // TODO: remove these
     static let cancelToken = "cancelFastlaneRun"
-    
+
     fileprivate var inputStream: InputStream!
     fileprivate var outputStream: OutputStream!
     fileprivate var cleaningUpAfterDone = false
     fileprivate let dispatchGroup: DispatchGroup = DispatchGroup()
     fileprivate let commandTimeoutSeconds: Int
-    
+
     private let streamQueue: DispatchQueue
     private let host: String
     private let port: UInt32
 
     let maxReadLength = 65_536 // max for ipc on 10.12 is kern.ipc.maxsockbuf: 8388608 ($sysctl kern.ipc.maxsockbuf)
-    
+
     weak private(set) var socketDelegate: SocketClientDelegateProtocol?
-    
+
     public private(set) var socketStatus: SocketStatus
-    
+
     // localhost only, this prevents other computers from connecting
     init(host: String = "localhost", port: UInt32 = 2000, commandTimeoutSeconds: Int = defaultCommandTimeoutSeconds, socketDelegate: SocketClientDelegateProtocol) {
         self.host = host
@@ -63,78 +63,78 @@ class SocketClient: NSObject {
         self.socketDelegate = socketDelegate
         super.init()
     }
-    
+
     func connectAndOpenStreams() {
         var readStream: Unmanaged<CFReadStream>?
         var writeStream: Unmanaged<CFWriteStream>?
-        
+
         self.streamQueue.async {
             CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, self.host as CFString, self.port, &readStream, &writeStream)
-            
+
             self.inputStream = readStream!.takeRetainedValue()
             self.outputStream = writeStream!.takeRetainedValue()
-            
+
             self.inputStream.delegate = self
             self.outputStream.delegate = self
-            
+
             self.inputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
             self.outputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
         }
-        
+
         self.dispatchGroup.enter()
         self.streamQueue.async {
             self.inputStream.open()
         }
-        
+
         self.dispatchGroup.enter()
         self.streamQueue.async {
             self.outputStream.open()
         }
-        
+
         let secondsToWait = DispatchTimeInterval.seconds(SocketClient.connectTimeoutSeconds)
         let connectTimeout = DispatchTime.now() + secondsToWait
-        
+
         let timeoutResult = self.dispatchGroup.wait(timeout: connectTimeout)
         let failureMessage = "Couldn't connect to ruby process within: \(SocketClient.connectTimeoutSeconds) seconds"
-        
+
         let success = testDispatchTimeoutResult(timeoutResult, failureMessage: failureMessage, timeToWait: secondsToWait)
-        
+
         guard success else {
             self.socketDelegate?.commandExecuted(serverResponse: .connectionFailure)
             return
         }
-        
+
         self.socketStatus = .ready
         self.socketDelegate?.connectionsOpened()
     }
-    
+
     public func send(rubyCommand: RubyCommandable) {
         verbose(message: "sending: \(rubyCommand.json)")
         send(string: rubyCommand.json)
     }
-    
+
     public func sendComplete() {
         closeSession(sendAbort: true)
     }
-    
+
     private func testDispatchTimeoutResult(_ timeoutResult: DispatchTimeoutResult, failureMessage: String, timeToWait: DispatchTimeInterval) -> Bool {
         switch timeoutResult {
         case .success:
             return true
         case .timedOut:
             log(message: "Timeout: \(failureMessage)")
-            
+
             if case .seconds(let seconds) = timeToWait {
                 socketDelegate?.commandExecuted(serverResponse: .commandTimeout(seconds: seconds))
             }
             return false
         }
     }
-    
+
     private func stopInputSession() {
         inputStream.close()
     }
-    
+
     private func stopOutputSession() {
         outputStream.close()
     }
@@ -196,45 +196,45 @@ extension SocketClient: StreamDelegate {
             self.dispatchGroup.leave()
             return
         }
-        
+
         if aStream === self.inputStream {
             switch eventCode {
             case Stream.Event.openCompleted:
                 self.dispatchGroup.leave()
-                
+
             case Stream.Event.errorOccurred:
                 verbose(message: "input stream error occurred")
                 closeSession(sendAbort: true)
-                
+
             case Stream.Event.hasBytesAvailable:
                 read()
-                
+
             case Stream.Event.endEncountered:
                 // nothing special here
                 break
-                
+
             case Stream.Event.hasSpaceAvailable:
                 // we don't care about this
                 break
-                
+
             default:
                 verbose(message: "input stream caused unrecognized event: \(eventCode)")
             }
-            
+
         } else if aStream === self.outputStream {
             switch eventCode {
             case Stream.Event.openCompleted:
                 self.dispatchGroup.leave()
-                
+
             case Stream.Event.errorOccurred:
                 // probably safe to close all the things because Ruby already disconnected
                 verbose(message: "output stream recevied error")
                 break
-                
+
             case Stream.Event.endEncountered:
                 // nothing special here
                 break
-                
+
             case Stream.Event.hasSpaceAvailable:
                 // we don't care about this
                 break
@@ -244,7 +244,7 @@ extension SocketClient: StreamDelegate {
             }
         }
     }
-    
+
     func read() {
         var buffer = [UInt8](repeating: 0, count: maxReadLength)
         var output = ""
@@ -259,13 +259,13 @@ extension SocketClient: StreamDelegate {
 
         processResponse(string: output)
     }
-    
+
     func handleFailure(message: [String]) {
-        log(message: "Encountered a problem: \(message.joined(separator:"\n"))")
+        log(message: "Encountered a problem: \(message.joined(separator: "\n"))")
         let shutdownCommand = ControlCommand(commandType: .cancel(cancelReason: .serverError))
         self.send(rubyCommand: shutdownCommand)
     }
-    
+
     func processResponse(string: String) {
         guard string.count > 0 else {
             self.socketDelegate?.commandExecuted(serverResponse: .malformedResponse)
@@ -273,7 +273,7 @@ extension SocketClient: StreamDelegate {
 
             return
         }
-        
+
         let responseString = string.trimmingCharacters(in: .whitespacesAndNewlines)
         let socketResponse = SocketResponse(payload: responseString)
         verbose(message: "response is: \(responseString)")

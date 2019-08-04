@@ -51,7 +51,7 @@ struct ControlCommand: RubyCommandable {
     let message: String?
     let shutdownCommandType: ShutdownCommandType
     var commandJson: String {
-        var jsonDictionary: [String: Any] = [ControlCommand.commandKey : self.shutdownCommandType.token]
+        var jsonDictionary: [String: Any] = [ControlCommand.commandKey: self.shutdownCommandType.token]
 
         if let message = message {
             jsonDictionary[ShutdownCommandType.userMessageKey] = message

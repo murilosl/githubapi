@@ -13,56 +13,49 @@
 @testable import GitHubAPP
 import XCTest
 
-class MainInteractorTests: XCTestCase
-{
+class MainInteractorTests: XCTestCase {
   // MARK: Subject under test
-  
+
   var sut: MainInteractor!
-  
+
   // MARK: Test lifecycle
-  
-  override func setUp()
-  {
+
+  override func setUp() {
     super.setUp()
     setupMainInteractor()
   }
-  
-  override func tearDown()
-  {
+
+  override func tearDown() {
     super.tearDown()
   }
-  
+
   // MARK: Test setup
-  
-  func setupMainInteractor()
-  {
+
+  func setupMainInteractor() {
     sut = MainInteractor()
   }
-  
+
   // MARK: Test doubles
-  
-  class MainPresentationLogicSpy: MainPresentationLogic
-  {
+
+  class MainPresentationLogicSpy: MainPresentationLogic {
     var presentSomethingCalled = false
-    
-    func presentSomething(response: Main.Something.Response)
-    {
+
+    func presentSomething(response: Main.Something.Response) {
       presentSomethingCalled = true
     }
   }
-  
+
   // MARK: Tests
-  
-  func testDoSomething()
-  {
+
+  func testDoSomething() {
     // Given
     let spy = MainPresentationLogicSpy()
     sut.presenter = spy
     let request = Main.Something.Request()
-    
+
     // When
     sut.doSomething(request: request)
-    
+
     // Then
     XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
   }

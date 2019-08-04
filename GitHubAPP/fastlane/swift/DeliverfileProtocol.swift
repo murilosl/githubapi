@@ -42,14 +42,14 @@ protocol DeliverfileProtocol: class {
   var primarySecondSubCategory: String? { get }
   var secondaryFirstSubCategory: String? { get }
   var secondarySecondSubCategory: String? { get }
-  var tradeRepresentativeContactInformation: [String : Any]? { get }
-  var appReviewInformation: [String : Any]? { get }
+  var tradeRepresentativeContactInformation: [String: Any]? { get }
+  var appReviewInformation: [String: Any]? { get }
   var appReviewAttachmentFile: String? { get }
   var description: String? { get }
   var name: String? { get }
-  var subtitle: [String : Any]? { get }
-  var keywords: [String : Any]? { get }
-  var promotionalText: [String : Any]? { get }
+  var subtitle: [String: Any]? { get }
+  var keywords: [String: Any]? { get }
+  var promotionalText: [String: Any]? { get }
   var releaseNotes: String? { get }
   var privacyUrl: String? { get }
   var appleTvPrivacyPolicy: String? { get }
@@ -105,14 +105,14 @@ extension DeliverfileProtocol {
   var primarySecondSubCategory: String? { return nil }
   var secondaryFirstSubCategory: String? { return nil }
   var secondarySecondSubCategory: String? { return nil }
-  var tradeRepresentativeContactInformation: [String : Any]? { return nil }
-  var appReviewInformation: [String : Any]? { return nil }
+  var tradeRepresentativeContactInformation: [String: Any]? { return nil }
+  var appReviewInformation: [String: Any]? { return nil }
   var appReviewAttachmentFile: String? { return nil }
   var description: String? { return nil }
   var name: String? { return nil }
-  var subtitle: [String : Any]? { return nil }
-  var keywords: [String : Any]? { return nil }
-  var promotionalText: [String : Any]? { return nil }
+  var subtitle: [String: Any]? { return nil }
+  var keywords: [String: Any]? { return nil }
+  var promotionalText: [String: Any]? { return nil }
   var releaseNotes: String? { return nil }
   var privacyUrl: String? { return nil }
   var appleTvPrivacyPolicy: String? { return nil }

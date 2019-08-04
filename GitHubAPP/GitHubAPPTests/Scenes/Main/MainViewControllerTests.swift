@@ -15,85 +15,76 @@ import XCTest
 import Nimble
 import Quick
 
-class MainViewControllerTests: XCTestCase
-{
+class MainViewControllerTests: XCTestCase {
   // MARK: Subject under test
-  
+
   var sut: MainViewController!
   var window: UIWindow!
-  
+
   // MARK: Test lifecycle
-  
-  override func setUp()
-  {
+
+  override func setUp() {
     super.setUp()
     window = UIWindow()
     setupMainViewController()
   }
-  
-  override func tearDown()
-  {
+
+  override func tearDown() {
     window = nil
     super.tearDown()
   }
-  
+
   // MARK: Test setup
-  
-  func setupMainViewController()
-  {
+
+  func setupMainViewController() {
     let bundle = Bundle.main
     let storyboard = UIStoryboard(name: "Main", bundle: bundle)
     sut = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
   }
-  
-  func loadView()
-  {
+
+  func loadView() {
     window.addSubview(sut.view)
     RunLoop.current.run(until: Date())
   }
-  
+
   // MARK: Test doubles
-  
-  class MainBusinessLogicSpy: MainBusinessLogic
-  {
+
+  class MainBusinessLogicSpy: MainBusinessLogic {
     func loadRepo(request: Main.Repo.Request) {
-        
+
     }
-    
+
     var item: Item?
-    
+
     var doSomethingCalled = false
-    
-    func doSomething(request: Main.Something.Request)
-    {
+
+    func doSomething(request: Main.Something.Request) {
       doSomethingCalled = true
     }
   }
-  
+
   // MARK: Tests
-  
-  func testShouldDoSomethingWhenViewIsLoaded()
-  {
+
+  func testShouldDoSomethingWhenViewIsLoaded() {
     // Given
     let spy = MainBusinessLogicSpy()
     sut.interactor = spy
-    
+
     // When
     loadView()
-    
+
     // Then
     XCTAssertTrue(spy.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
   }
-  
-  func testDisplaySomething()
-  {
+
+  func testDisplaySomething() {
     // Given
     let viewModel = Main.Something.ViewModel(item: [])
-    
+
     // When
     loadView()
     sut.displaySomething(viewModel: viewModel)
-    
+
     // Then
     //XCTAssertEqual(sut.nameTextField.text, "", "displaySomething(viewModel:) should update the name text field")
   }

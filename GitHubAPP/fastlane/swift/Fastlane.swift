@@ -118,8 +118,8 @@ func appium(platform: String,
             host: String = "0.0.0.0",
             port: Int = 4723,
             appiumPath: String? = nil,
-            caps: [String : Any]? = nil,
-            appiumLib: [String : Any]? = nil) {
+            caps: [String: Any]? = nil,
+            appiumLib: [String: Any]? = nil) {
   let command = RubyCommand(commandID: "", methodName: "appium", className: nil, args: [RubyCommand.Argument(name: "platform", value: platform),
                                                                                         RubyCommand.Argument(name: "spec_path", value: specPath),
                                                                                         RubyCommand.Argument(name: "app_path", value: appPath),
@@ -266,14 +266,14 @@ func appstore(username: String,
               primarySecondSubCategory: String? = nil,
               secondaryFirstSubCategory: String? = nil,
               secondarySecondSubCategory: String? = nil,
-              tradeRepresentativeContactInformation: [String : Any]? = nil,
-              appReviewInformation: [String : Any]? = nil,
+              tradeRepresentativeContactInformation: [String: Any]? = nil,
+              appReviewInformation: [String: Any]? = nil,
               appReviewAttachmentFile: String? = nil,
               description: String? = nil,
               name: String? = nil,
-              subtitle: [String : Any]? = nil,
-              keywords: [String : Any]? = nil,
-              promotionalText: [String : Any]? = nil,
+              subtitle: [String: Any]? = nil,
+              keywords: [String: Any]? = nil,
+              promotionalText: [String: Any]? = nil,
               releaseNotes: String? = nil,
               privacyUrl: String? = nil,
               appleTvPrivacyPolicy: String? = nil,
@@ -359,7 +359,7 @@ func artifactory(file: String,
                  endpoint: String,
                  username: String,
                  password: String,
-                 properties: [String : Any] = [:],
+                 properties: [String: Any] = [:],
                  sslPemFile: String? = nil,
                  sslVerify: Bool = true,
                  proxyUsername: String? = nil,
@@ -441,7 +441,7 @@ func badge(dark: String? = nil,
                                                                                        RubyCommand.Argument(name: "shield_no_resize", value: shieldNoResize)])
   _ = runner.executeCommand(command)
 }
-func buildAndUploadToAppetize(xcodebuild: [String : Any] = [:],
+func buildAndUploadToAppetize(xcodebuild: [String: Any] = [:],
                               scheme: String? = nil,
                               apiToken: String,
                               publicKey: String? = nil,
@@ -490,7 +490,7 @@ func buildApp(workspace: String? = nil,
               includeSymbols: Bool? = nil,
               includeBitcode: Bool? = nil,
               exportMethod: String? = nil,
-              exportOptions: [String : Any]? = nil,
+              exportOptions: [String: Any]? = nil,
               exportXcargs: String? = nil,
               skipBuildArchive: Bool? = nil,
               skipArchive: Bool? = nil,
@@ -570,7 +570,7 @@ func buildIosApp(workspace: String? = nil,
                  includeSymbols: Bool? = nil,
                  includeBitcode: Bool? = nil,
                  exportMethod: String? = nil,
-                 exportOptions: [String : Any]? = nil,
+                 exportOptions: [String: Any]? = nil,
                  exportXcargs: String? = nil,
                  skipBuildArchive: Bool? = nil,
                  skipArchive: Bool? = nil,
@@ -1041,7 +1041,7 @@ func cocoapods(repoUpdate: Bool = false,
                                          branch: String = "master",
                                          path: String,
                                          message: String? = nil,
-                                         secure: Bool = true) -> [String : String] {
+                                         secure: Bool = true) -> [String: String] {
   let command = RubyCommand(commandID: "", methodName: "commit_github_file", className: nil, args: [RubyCommand.Argument(name: "repository_name", value: repositoryName),
                                                                                                     RubyCommand.Argument(name: "server_url", value: serverUrl),
                                                                                                     RubyCommand.Argument(name: "api_token", value: apiToken),
@@ -1130,8 +1130,8 @@ func createAppOnline(username: String,
                      companyName: String? = nil,
                      skipItc: Bool = false,
                      itcUsers: [String]? = nil,
-                     enabledFeatures: [String : Any] = [:],
-                     enableServices: [String : Any] = [:],
+                     enabledFeatures: [String: Any] = [:],
+                     enableServices: [String: Any] = [:],
                      skipDevcenter: Bool = false,
                      teamId: String? = nil,
                      teamName: String? = nil,
@@ -1278,14 +1278,14 @@ func deliver(username: String = deliverfile.username,
              primarySecondSubCategory: String? = deliverfile.primarySecondSubCategory,
              secondaryFirstSubCategory: String? = deliverfile.secondaryFirstSubCategory,
              secondarySecondSubCategory: String? = deliverfile.secondarySecondSubCategory,
-             tradeRepresentativeContactInformation: [String : Any]? = deliverfile.tradeRepresentativeContactInformation,
-             appReviewInformation: [String : Any]? = deliverfile.appReviewInformation,
+             tradeRepresentativeContactInformation: [String: Any]? = deliverfile.tradeRepresentativeContactInformation,
+             appReviewInformation: [String: Any]? = deliverfile.appReviewInformation,
              appReviewAttachmentFile: String? = deliverfile.appReviewAttachmentFile,
              description: String? = deliverfile.description,
              name: String? = deliverfile.name,
-             subtitle: [String : Any]? = deliverfile.subtitle,
-             keywords: [String : Any]? = deliverfile.keywords,
-             promotionalText: [String : Any]? = deliverfile.promotionalText,
+             subtitle: [String: Any]? = deliverfile.subtitle,
+             keywords: [String: Any]? = deliverfile.keywords,
+             promotionalText: [String: Any]? = deliverfile.promotionalText,
              releaseNotes: String? = deliverfile.releaseNotes,
              privacyUrl: String? = deliverfile.privacyUrl,
              appleTvPrivacyPolicy: String? = deliverfile.appleTvPrivacyPolicy,
@@ -1467,7 +1467,7 @@ func ensureXcodeVersion(version: String? = nil) {
   let command = RubyCommand(commandID: "", methodName: "ensure_xcode_version", className: nil, args: [RubyCommand.Argument(name: "version", value: version)])
   _ = runner.executeCommand(command)
 }
-@discardableResult func environmentVariable(`set`: [String : Any]? = nil,
+@discardableResult func environmentVariable(`set`: [String: Any]? = nil,
                                             `get`: String? = nil,
                                             remove: String? = nil) -> String {
   let command = RubyCommand(commandID: "", methodName: "environment_variable", className: nil, args: [RubyCommand.Argument(name: "set", value: `set`),
@@ -1477,7 +1477,7 @@ func ensureXcodeVersion(version: String? = nil) {
 }
 func erb(template: String,
          destination: String? = nil,
-         placeholders: [String : Any] = [:]) {
+         placeholders: [String: Any] = [:]) {
   let command = RubyCommand(commandID: "", methodName: "erb", className: nil, args: [RubyCommand.Argument(name: "template", value: template),
                                                                                      RubyCommand.Argument(name: "destination", value: destination),
                                                                                      RubyCommand.Argument(name: "placeholders", value: placeholders)])
@@ -1734,12 +1734,12 @@ func gitTagExists(tag: String,
 func githubApi(serverUrl: String = "https://api.github.com",
                apiToken: String,
                httpMethod: String = "GET",
-               body: [String : Any] = [:],
+               body: [String: Any] = [:],
                rawBody: String? = nil,
                path: String? = nil,
                url: String? = nil,
-               errorHandlers: [String : Any] = [:],
-               headers: [String : Any] = [:],
+               errorHandlers: [String: Any] = [:],
+               headers: [String: Any] = [:],
                secure: Bool = true) {
   let command = RubyCommand(commandID: "", methodName: "github_api", className: nil, args: [RubyCommand.Argument(name: "server_url", value: serverUrl),
                                                                                             RubyCommand.Argument(name: "api_token", value: apiToken),
@@ -1808,7 +1808,7 @@ func gym(workspace: String? = gymfile.workspace,
          includeSymbols: Bool? = gymfile.includeSymbols,
          includeBitcode: Bool? = gymfile.includeBitcode,
          exportMethod: String? = gymfile.exportMethod,
-         exportOptions: [String : Any]? = gymfile.exportOptions,
+         exportOptions: [String: Any]? = gymfile.exportOptions,
          exportXcargs: String? = gymfile.exportXcargs,
          skipBuildArchive: Bool? = gymfile.skipBuildArchive,
          skipArchive: Bool? = gymfile.skipArchive,
@@ -2103,11 +2103,11 @@ func jira(url: String,
                                                                                       RubyCommand.Argument(name: "comment_text", value: commentText)])
   _ = runner.executeCommand(command)
 }
-@discardableResult func laneContext() -> [String : Any] {
+@discardableResult func laneContext() -> [String: Any] {
   let command = RubyCommand(commandID: "", methodName: "lane_context", className: nil, args: [])
   return parseDictionary(fromString: runner.executeCommand(command))
 }
-@discardableResult func lastGitCommit() -> [String : String] {
+@discardableResult func lastGitCommit() -> [String: String] {
   let command = RubyCommand(commandID: "", methodName: "last_git_commit", className: nil, args: [])
   return parseDictionary(fromString: runner.executeCommand(command))
 }
@@ -2158,7 +2158,7 @@ func mailgun(mailgunSandboxDomain: String? = nil,
              templatePath: String? = nil,
              replyTo: String? = nil,
              attachment: String? = nil,
-             customPlaceholders: [String : Any] = [:]) {
+             customPlaceholders: [String: Any] = [:]) {
   let command = RubyCommand(commandID: "", methodName: "mailgun", className: nil, args: [RubyCommand.Argument(name: "mailgun_sandbox_domain", value: mailgunSandboxDomain),
                                                                                          RubyCommand.Argument(name: "mailgun_sandbox_postmaster", value: mailgunSandboxPostmaster),
                                                                                          RubyCommand.Argument(name: "mailgun_apikey", value: mailgunApikey),
@@ -2243,7 +2243,7 @@ func minFastlaneVersion() {
 }
 func modifyServices(username: String,
                     appIdentifier: String,
-                    services: [String : Any] = [:],
+                    services: [String: Any] = [:],
                     teamId: String? = nil,
                     teamName: String? = nil) {
   let command = RubyCommand(commandID: "", methodName: "modify_services", className: nil, args: [RubyCommand.Argument(name: "username", value: username),
@@ -2417,11 +2417,11 @@ func pilot(username: String,
            appleId: String? = nil,
            ipa: String? = nil,
            demoAccountRequired: Bool = false,
-           betaAppReviewInfo: [String : Any]? = nil,
-           localizedAppInfo: [String : Any]? = nil,
+           betaAppReviewInfo: [String: Any]? = nil,
+           localizedAppInfo: [String: Any]? = nil,
            betaAppDescription: String? = nil,
            betaAppFeedbackEmail: String? = nil,
-           localizedBuildInfo: [String : Any]? = nil,
+           localizedBuildInfo: [String: Any]? = nil,
            changelog: String? = nil,
            skipSubmission: Bool = false,
            skipWaitingForBuildProcessing: Bool = false,
@@ -2549,7 +2549,7 @@ func podioItem(clientId: String,
                appToken: String,
                identifyingField: String,
                identifyingValue: String,
-               otherFields: [String : Any]? = nil) {
+               otherFields: [String: Any]? = nil) {
   let command = RubyCommand(commandID: "", methodName: "podio_item", className: nil, args: [RubyCommand.Argument(name: "client_id", value: clientId),
                                                                                             RubyCommand.Argument(name: "client_secret", value: clientSecret),
                                                                                             RubyCommand.Argument(name: "app_id", value: appId),
@@ -2590,8 +2590,8 @@ func produce(username: String,
              companyName: String? = nil,
              skipItc: Bool = false,
              itcUsers: [String]? = nil,
-             enabledFeatures: [String : Any] = [:],
-             enableServices: [String : Any] = [:],
+             enabledFeatures: [String: Any] = [:],
+             enableServices: [String: Any] = [:],
              skipDevcenter: Bool = false,
              teamId: String? = nil,
              teamName: String? = nil,
@@ -2659,7 +2659,7 @@ func puts(message: String? = nil) {
   let command = RubyCommand(commandID: "", methodName: "puts", className: nil, args: [RubyCommand.Argument(name: "message", value: message)])
   _ = runner.executeCommand(command)
 }
-@discardableResult func readPodspec(path: String) -> [String : String] {
+@discardableResult func readPodspec(path: String) -> [String: String] {
   let command = RubyCommand(commandID: "", methodName: "read_podspec", className: nil, args: [RubyCommand.Argument(name: "path", value: path)])
   return parseDictionary(fromString: runner.executeCommand(command))
 }
@@ -2679,7 +2679,7 @@ func recreateSchemes(project: String) {
                                                                                                  RubyCommand.Argument(name: "username", value: username)])
   return runner.executeCommand(command)
 }
-func registerDevices(devices: [String : Any]? = nil,
+func registerDevices(devices: [String: Any]? = nil,
                      devicesFile: String? = nil,
                      teamId: String? = nil,
                      teamName: String? = nil,
@@ -3027,8 +3027,8 @@ func scp(username: String,
          password: String? = nil,
          host: String,
          port: String = "22",
-         upload: [String : Any]? = nil,
-         download: [String : Any]? = nil) {
+         upload: [String: Any]? = nil,
+         download: [String: Any]? = nil) {
   let command = RubyCommand(commandID: "", methodName: "scp", className: nil, args: [RubyCommand.Argument(name: "username", value: username),
                                                                                      RubyCommand.Argument(name: "password", value: password),
                                                                                      RubyCommand.Argument(name: "host", value: host),
@@ -3108,7 +3108,7 @@ func setChangelog(appIdentifier: String,
                                          description: String? = nil,
                                          isDraft: Bool = false,
                                          isPrerelease: Bool = false,
-                                         uploadAssets: [String]? = nil) -> [String : String] {
+                                         uploadAssets: [String]? = nil) -> [String: String] {
   let command = RubyCommand(commandID: "", methodName: "set_github_release", className: nil, args: [RubyCommand.Argument(name: "repository_name", value: repositoryName),
                                                                                                     RubyCommand.Argument(name: "server_url", value: serverUrl),
                                                                                                     RubyCommand.Argument(name: "api_token", value: apiToken),
@@ -3242,9 +3242,9 @@ func slack(message: String? = nil,
            slackUrl: String,
            username: String = "fastlane",
            iconUrl: String = "https://s3-eu-west-1.amazonaws.com/fastlane.tools/fastlane.png",
-           payload: [String : Any] = [:],
+           payload: [String: Any] = [:],
            defaultPayloads: [String]? = nil,
-           attachmentProperties: [String : Any] = [:],
+           attachmentProperties: [String: Any] = [:],
            success: Bool = true,
            failOnError: Bool = true,
            linkNames: Bool = false) {
@@ -3677,11 +3677,11 @@ func testflight(username: String,
                 appleId: String? = nil,
                 ipa: String? = nil,
                 demoAccountRequired: Bool = false,
-                betaAppReviewInfo: [String : Any]? = nil,
-                localizedAppInfo: [String : Any]? = nil,
+                betaAppReviewInfo: [String: Any]? = nil,
+                localizedAppInfo: [String: Any]? = nil,
                 betaAppDescription: String? = nil,
                 betaAppFeedbackEmail: String? = nil,
-                localizedBuildInfo: [String : Any]? = nil,
+                localizedBuildInfo: [String: Any]? = nil,
                 changelog: String? = nil,
                 skipSubmission: Bool = false,
                 skipWaitingForBuildProcessing: Bool = false,
@@ -3952,14 +3952,14 @@ func uploadToAppStore(username: String,
                       primarySecondSubCategory: String? = nil,
                       secondaryFirstSubCategory: String? = nil,
                       secondarySecondSubCategory: String? = nil,
-                      tradeRepresentativeContactInformation: [String : Any]? = nil,
-                      appReviewInformation: [String : Any]? = nil,
+                      tradeRepresentativeContactInformation: [String: Any]? = nil,
+                      appReviewInformation: [String: Any]? = nil,
                       appReviewAttachmentFile: String? = nil,
                       description: String? = nil,
                       name: String? = nil,
-                      subtitle: [String : Any]? = nil,
-                      keywords: [String : Any]? = nil,
-                      promotionalText: [String : Any]? = nil,
+                      subtitle: [String: Any]? = nil,
+                      keywords: [String: Any]? = nil,
+                      promotionalText: [String: Any]? = nil,
                       releaseNotes: String? = nil,
                       privacyUrl: String? = nil,
                       appleTvPrivacyPolicy: String? = nil,
@@ -4099,11 +4099,11 @@ func uploadToTestflight(username: String,
                         appleId: String? = nil,
                         ipa: String? = nil,
                         demoAccountRequired: Bool = false,
-                        betaAppReviewInfo: [String : Any]? = nil,
-                        localizedAppInfo: [String : Any]? = nil,
+                        betaAppReviewInfo: [String: Any]? = nil,
+                        localizedAppInfo: [String: Any]? = nil,
                         betaAppDescription: String? = nil,
                         betaAppFeedbackEmail: String? = nil,
-                        localizedBuildInfo: [String : Any]? = nil,
+                        localizedBuildInfo: [String: Any]? = nil,
                         changelog: String? = nil,
                         skipSubmission: Bool = false,
                         skipWaitingForBuildProcessing: Bool = false,
@@ -4355,15 +4355,15 @@ func parseArray(fromString: String, function: String = #function) -> [String] {
   return array
 }
 
-func parseDictionary(fromString: String, function: String = #function) -> [String : String] {
+func parseDictionary(fromString: String, function: String = #function) -> [String: String] {
     return parseDictionaryHelper(fromString: fromString, function: function) as! [String: String]
 }
 
-func parseDictionary(fromString: String, function: String = #function) -> [String : Any] {
+func parseDictionary(fromString: String, function: String = #function) -> [String: Any] {
     return parseDictionaryHelper(fromString: fromString, function: function)
 }
 
-func parseDictionaryHelper(fromString: String, function: String = #function) -> [String : Any] {
+func parseDictionaryHelper(fromString: String, function: String = #function) -> [String: Any] {
   verbose(message: "parsing an Array from data: \(fromString), from function: \(function)")
   let potentialDictionary: String
   if fromString.count < 2 {
@@ -4372,7 +4372,7 @@ func parseDictionaryHelper(fromString: String, function: String = #function) -> 
   } else {
       potentialDictionary = fromString
   }
-  let dictionary: [String : Any] = try! JSONSerialization.jsonObject(with: potentialDictionary.data(using: .utf8)!, options: []) as! [String : Any]
+  let dictionary: [String: Any] = try! JSONSerialization.jsonObject(with: potentialDictionary.data(using: .utf8)!, options: []) as! [String: Any]
   return dictionary
 }
 
@@ -4385,7 +4385,7 @@ func parseInt(fromString: String, function: String = #function) -> Int {
   verbose(message: "parsing an Int from data: \(fromString), from function: \(function)")
   return NSString(string: fromString.trimmingCharacters(in: .punctuationCharacters)).integerValue
 }
-      
+
 let deliverfile: Deliverfile = Deliverfile()
 let gymfile: Gymfile = Gymfile()
 let matchfile: Matchfile = Matchfile()

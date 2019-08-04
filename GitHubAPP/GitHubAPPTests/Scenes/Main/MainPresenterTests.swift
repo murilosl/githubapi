@@ -13,60 +13,53 @@
 @testable import GitHubAPP
 import XCTest
 
-class MainPresenterTests: XCTestCase
-{
+class MainPresenterTests: XCTestCase {
   // MARK: Subject under test
-  
+
   var sut: MainPresenter!
-  
+
   // MARK: Test lifecycle
-  
-  override func setUp()
-  {
+
+  override func setUp() {
     super.setUp()
     setupMainPresenter()
   }
-  
-  override func tearDown()
-  {
+
+  override func tearDown() {
     super.tearDown()
   }
-  
+
   // MARK: Test setup
-  
-  func setupMainPresenter()
-  {
+
+  func setupMainPresenter() {
     sut = MainPresenter()
   }
-  
+
   // MARK: Test doubles
-  
-  class MainDisplayLogicSpy: MainDisplayLogic
-  {
+
+  class MainDisplayLogicSpy: MainDisplayLogic {
     func displayRepo(viewModel: Main.Repo.ViewModel) {
         <#code#>
     }
-    
+
     var displaySomethingCalled = false
-    
-    func displaySomething(viewModel: Main.Something.ViewModel)
-    {
+
+    func displaySomething(viewModel: Main.Something.ViewModel) {
       displaySomethingCalled = true
     }
   }
-  
+
   // MARK: Tests
-  
-  func testPresentSomething()
-  {
+
+  func testPresentSomething() {
     // Given
     let spy = MainDisplayLogicSpy()
     sut.viewController = spy
     let response = Main.Something.Response(item: [])
-    
+
     // When
     sut.presentSomething(response: response)
-    
+
     // Then
     XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
   }

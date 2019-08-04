@@ -16,7 +16,7 @@ import Foundation
 
 public protocol LaneFileProtocol: class {
     var fastlaneVersion: String { get }
-    static func runLane(named: String, parameters: [String : String]) -> Bool
+    static func runLane(named: String, parameters: [String: String]) -> Bool
 
     func recordLaneDescriptions()
     func beforeAll()
@@ -64,8 +64,8 @@ public class LaneFile: NSObject, LaneFileProtocol {
         return lanes
     }
 
-    public static var lanes: [String : String] {
-        var laneToMethodName: [String : String] = [:]
+    public static var lanes: [String: String] {
+        var laneToMethodName: [String: String] = [:]
         self.laneFunctionNames.forEach { name in
             let lowercasedName = name.lowercased()
             if lowercasedName.hasSuffix("lane") {
@@ -92,7 +92,7 @@ public class LaneFile: NSObject, LaneFileProtocol {
         }
     }
 
-    public static func runLane(named: String, parameters: [String : String]) -> Bool {
+    public static func runLane(named: String, parameters: [String: String]) -> Bool {
         log(message: "Running lane: \(named)")
         self.loadFastfile()
 

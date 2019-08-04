@@ -12,7 +12,7 @@ protocol GymfileProtocol: class {
   var includeSymbols: Bool? { get }
   var includeBitcode: Bool? { get }
   var exportMethod: String? { get }
-  var exportOptions: [String : Any]? { get }
+  var exportOptions: [String: Any]? { get }
   var exportXcargs: String? { get }
   var skipBuildArchive: Bool? { get }
   var skipArchive: Bool? { get }
@@ -54,7 +54,7 @@ extension GymfileProtocol {
   var includeSymbols: Bool? { return nil }
   var includeBitcode: Bool? { return nil }
   var exportMethod: String? { return nil }
-  var exportOptions: [String : Any]? { return nil }
+  var exportOptions: [String: Any]? { return nil }
   var exportXcargs: String? { return nil }
   var skipBuildArchive: Bool? { return nil }
   var skipArchive: Bool? { return nil }
