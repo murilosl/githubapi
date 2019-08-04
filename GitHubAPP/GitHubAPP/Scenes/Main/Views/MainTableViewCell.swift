@@ -45,7 +45,8 @@ class MainTableViewCell: UITableViewCell {
         fullNameLabel.text = item.full_name
         imageAuthor.load(url: item.owner.avatar_url)
 
-        starButton.setTitle((String(item.stargazers_count)), for: .normal)
+        let star = "★ \(item.stargazers_count)"
+        starButton.setTitle(star, for: .normal)
 
         setupUI()
         setupConstraints()

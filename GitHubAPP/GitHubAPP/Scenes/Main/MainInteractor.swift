@@ -14,6 +14,7 @@ import UIKit
 
 protocol MainBusinessLogic {
     func doSomething(request: Main.Something.Request)
+    func loadRepo(request: Main.Repo.Request)
     var item: Item? {get set }
 }
 
@@ -22,6 +23,8 @@ protocol MainDataStore {
 }
 
 class MainInteractor: MainBusinessLogic, MainDataStore {
+
+    
 
     var item: Item?
 
@@ -38,5 +41,12 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
             self.presenter?.presentSomething(response: response)
         })
 
+    }
+    
+    func loadRepo(request: Main.Repo.Request) {
+        let itemRequest = request.item
+        item = itemRequest
+        let response = Main.Repo.Response(item: item!)
+        presenter?.presentRepo(response: response)
     }
 }

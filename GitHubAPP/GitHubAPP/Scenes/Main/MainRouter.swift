@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol MainRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToRepo()
 }
 
 protocol MainDataPassing {
@@ -21,37 +21,28 @@ protocol MainDataPassing {
 }
 
 class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
+    
     weak var viewController: MainViewController?
     var dataStore: MainDataStore?
-
-    // MARK: Routing
-
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
-
+    
+    func routeToRepo() {
+        let destinationVC = RepoViewController()
+        var destinationDS = destinationVC.router?.dataStore
+        passDataToRepo(source: dataStore!, destination: &destinationDS!)
+        navigateToRepo(source: viewController!, destination: destinationVC)
+    }
+    
     // MARK: Navigation
-
-    //func navigateToSomewhere(source: MainViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
-
+    
+    func navigateToRepo(source: MainViewController, destination: RepoViewController)
+    {
+        source.show(destination, sender: nil)
+    }
+    
     // MARK: Passing data
-
-    //func passDataToSomewhere(source: MainDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    
+    func passDataToRepo(source: MainDataStore, destination: inout RepoDataStore)
+    {
+        destination.item = source.item!
+    }
 }

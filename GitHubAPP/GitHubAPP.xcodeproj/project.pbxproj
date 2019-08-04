@@ -31,6 +31,13 @@
 		BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */; };
 		BEDF82E022F6326C0051CA8E /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDF82DF22F6326C0051CA8E /* load.gif */; };
 		BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */; };
+		BEDF82EC22F65CB30051CA8E /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E622F65CB30051CA8E /* RepoPresenter.swift */; };
+		BEDF82ED22F65CB30051CA8E /* RepoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E722F65CB30051CA8E /* RepoWorker.swift */; };
+		BEDF82EE22F65CB30051CA8E /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E822F65CB30051CA8E /* RepoRouter.swift */; };
+		BEDF82EF22F65CB30051CA8E /* RepoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E922F65CB30051CA8E /* RepoModels.swift */; };
+		BEDF82F022F65CB30051CA8E /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82EA22F65CB30051CA8E /* RepoViewController.swift */; };
+		BEDF82F122F65CB30051CA8E /* RepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82EB22F65CB30051CA8E /* RepoInteractor.swift */; };
+		BEDF82F422F666470051CA8E /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82F322F666470051CA8E /* RepoView.swift */; };
 		DE62F634A014A76AD94C38BC /* Pods_GitHubAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531043EA5583037EB716C295 /* Pods_GitHubAPPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +95,13 @@
 		BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
 		BEDF82DF22F6326C0051CA8E /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = load.gif; path = ../../../../../../../Documents/load.gif; sourceTree = "<group>"; };
 		BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIImage+Gif.swift"; sourceTree = "<group>"; };
+		BEDF82E622F65CB30051CA8E /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
+		BEDF82E722F65CB30051CA8E /* RepoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoWorker.swift; sourceTree = "<group>"; };
+		BEDF82E822F65CB30051CA8E /* RepoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
+		BEDF82E922F65CB30051CA8E /* RepoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModels.swift; sourceTree = "<group>"; };
+		BEDF82EA22F65CB30051CA8E /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		BEDF82EB22F65CB30051CA8E /* RepoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInteractor.swift; sourceTree = "<group>"; };
+		BEDF82F322F666470051CA8E /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		C16616CC5C8749A9BF442E5D /* Pods-GitHubAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPP.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPP/Pods-GitHubAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C39075F4802B928ACAF06811 /* Pods-Clean Swift Template Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Swift Template Project.debug.xcconfig"; path = "Target Support Files/Pods-Clean Swift Template Project/Pods-Clean Swift Template Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C85F90E571EF5D26461DC952 /* Pods-GitHubAPPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAPPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAPPUITests/Pods-GitHubAPPUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +216,7 @@
 		BE17132222F478A300156E42 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF82E322F65C800051CA8E /* Repo */,
 				BE17132422F478CE00156E42 /* Main */,
 			);
 			path = Scenes;
@@ -221,7 +236,7 @@
 		BE17132422F478CE00156E42 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BE17133A22F48E5A00156E42 /* View */,
+				BE17133A22F48E5A00156E42 /* Views */,
 				BE17132522F478E900156E42 /* MainPresenter.swift */,
 				BE17132622F478E900156E42 /* MainWorker.swift */,
 				BE17132722F478E900156E42 /* MainRouter.swift */,
@@ -248,7 +263,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BE17133A22F48E5A00156E42 /* View */ = {
+		BE17133A22F48E5A00156E42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BEDF82DF22F6326C0051CA8E /* load.gif */,
@@ -256,7 +271,29 @@
 				BE17133D22F4922500156E42 /* MainTableViewCell.swift */,
 				BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */,
 			);
-			path = View;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEDF82E322F65C800051CA8E /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF82F222F666250051CA8E /* Views */,
+				BEDF82E622F65CB30051CA8E /* RepoPresenter.swift */,
+				BEDF82E722F65CB30051CA8E /* RepoWorker.swift */,
+				BEDF82E822F65CB30051CA8E /* RepoRouter.swift */,
+				BEDF82E922F65CB30051CA8E /* RepoModels.swift */,
+				BEDF82EA22F65CB30051CA8E /* RepoViewController.swift */,
+				BEDF82EB22F65CB30051CA8E /* RepoInteractor.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		BEDF82F222F666250051CA8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF82F322F666470051CA8E /* RepoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DA3777E297BC9305C21A066D /* Pods */ = {
@@ -524,17 +561,24 @@
 				BE763C1422F4E56000C38B0B /* UIImageView.swift in Sources */,
 				BE17133722F47D7400156E42 /* Item.swift in Sources */,
 				BE17132D22F478E900156E42 /* MainRouter.swift in Sources */,
+				BEDF82EE22F65CB30051CA8E /* RepoRouter.swift in Sources */,
 				BE17132E22F478E900156E42 /* MainModels.swift in Sources */,
+				BEDF82EC22F65CB30051CA8E /* RepoPresenter.swift in Sources */,
 				BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */,
+				BEDF82EF22F65CB30051CA8E /* RepoModels.swift in Sources */,
 				BE17132B22F478E900156E42 /* MainPresenter.swift in Sources */,
+				BEDF82F022F65CB30051CA8E /* RepoViewController.swift in Sources */,
 				BE17133922F4885200156E42 /* Constants.swift in Sources */,
 				BE17132C22F478E900156E42 /* MainWorker.swift in Sources */,
 				BE17133C22F48FD000156E42 /* MainView.swift in Sources */,
 				BE1712F522F4789500156E42 /* AppDelegate.swift in Sources */,
+				BEDF82ED22F65CB30051CA8E /* RepoWorker.swift in Sources */,
 				BE17133322F47A7000156E42 /* APIRequest.swift in Sources */,
+				BEDF82F122F65CB30051CA8E /* RepoInteractor.swift in Sources */,
 				BE17133E22F4922500156E42 /* MainTableViewCell.swift in Sources */,
 				BE17133022F478E900156E42 /* MainInteractor.swift in Sources */,
 				BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */,
+				BEDF82F422F666470051CA8E /* RepoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
