@@ -1,15 +1,14 @@
 //
-//  GitHubAPPTests.swift
-//  
+//  APITest.swift
+//  GitHubAPPTests
 //
-//  Created by Murilo de Souza Lopes on 02/08/19.
+//  Created by Murilo de Souza Lopes on 04/08/19.
 //  Copyright © 2019 Murilo de Souza Lopes. All rights reserved.
 //
 
 import XCTest
-@testable import GitHubAPP
 
-class Clean_Swift_Template_ProjectTests: XCTestCase {
+class APITest: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

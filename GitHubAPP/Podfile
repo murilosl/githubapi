@@ -12,13 +12,15 @@ target 'GitHubAPP' do
   target 'GitHubAPPTests' do
     inherit! :search_paths
     pod 'Nimble-Snapshots'
-    pod 'Quick' # if
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'GitHubAPPUITests' do
     inherit! :search_paths
     pod 'Nimble-Snapshots'
-    pod 'Quick' # if
+    pod 'Quick'
+    pod 'Nimble'
   end
 
 end
