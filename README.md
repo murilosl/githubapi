@@ -5,5 +5,4 @@
 **using**
 -  Clean Swift
 -  Alamofire
--  Snapshot
 -  SwiftLint
