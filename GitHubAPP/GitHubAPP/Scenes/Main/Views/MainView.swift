@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainView: UIView {
 
@@ -30,12 +31,13 @@ class MainView: UIView {
     }
 
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
-            ])
+        
+        tableView.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.snp.leading)
+            make.top.equalTo(self.snp.top)
+            make.trailing.equalTo(self.snp.trailing)
+            make.bottom.equalTo(self.snp.bottom)
+        }
     }
 
 }

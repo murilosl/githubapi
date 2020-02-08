@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainTableViewCell: UITableViewCell {
 
@@ -79,20 +80,32 @@ class MainTableViewCell: UITableViewCell {
     // MARK: - Setup Constraints
 
     func setupConstraints() {
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0(40)]-8-[v1(140)]-8-[v2(80)]-8-[v3(80)]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": imageAuthor, "v1": fullNameLabel, "v2": nameLabel, "v3": starButton]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": imageAuthor]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v1": fullNameLabel]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2": nameLabel]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v3]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v3": starButton]))
-
-        imageAuthor.translatesAutoresizingMaskIntoConstraints = false
-        imageAuthor.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        imageAuthor.widthAnchor.constraint(equalToConstant: 15).isActive = true
+        
+        contentView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(0)
+        }
+        
+        imageAuthor.snp.makeConstraints { (make) in
+            make.leading.equalTo(5)
+            make.height.equalTo(40)
+            make.width.equalTo(40)
+        }
+        
+        fullNameLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(imageAuthor.snp.trailing).offset(10)
+            make.top.equalTo(10)
+            make.width.equalTo(180)
+        }
+        
+        nameLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(fullNameLabel.snp.trailing).offset(10)
+            make.top.equalTo(10)
+        }
+        
+        starButton.snp.makeConstraints { (make) in
+            make.trailing.equalToSuperview().inset(10)
+            make.top.equalTo(10)
+        }
 
     }
 

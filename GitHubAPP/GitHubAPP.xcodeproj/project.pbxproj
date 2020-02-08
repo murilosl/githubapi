@@ -32,7 +32,6 @@
 		BE7E3C6D22F6A6BA0096A284 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C6922F6A6BA0096A284 /* MainPresenterTests.swift */; };
 		BE7E3C7022F6A6F50096A284 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E3C6F22F6A6F50096A284 /* APITest.swift */; };
 		BEDF82DC22F62ECA0051CA8E /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82DB22F62ECA0051CA8E /* RefreshView.swift */; };
-		BEDF82E022F6326C0051CA8E /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDF82DF22F6326C0051CA8E /* load.gif */; };
 		BEDF82E222F632E60051CA8E /*  UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E122F632E60051CA8E /*  UIImage+Gif.swift */; };
 		BEDF82EC22F65CB30051CA8E /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E622F65CB30051CA8E /* RepoPresenter.swift */; };
 		BEDF82ED22F65CB30051CA8E /* RepoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF82E722F65CB30051CA8E /* RepoWorker.swift */; };
@@ -481,7 +480,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDF82E022F6326C0051CA8E /* load.gif in Resources */,
 				BE1712FF22F4789600156E42 /* LaunchScreen.storyboard in Resources */,
 				BE1712FC22F4789600156E42 /* Assets.xcassets in Resources */,
 				BE1712FA22F4789500156E42 /* Main.storyboard in Resources */,

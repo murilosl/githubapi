@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class RepoView: UIView {
 
@@ -65,21 +66,29 @@ class RepoView: UIView {
     }
 
     func setupConstraints() {
-
-        addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[imageAuthorView]",
-            options: [.alignAllCenterX],
-            metrics: nil,
-            views: ["imageAuthorView": imageAuthor]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v1(200)]-8-[v2(40)]-8-[v3(80)]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": imageAuthor, "v1": fullNameLabel, "v2": nameLabel, "v3": starButton]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v1": fullNameLabel]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2": nameLabel]))
-
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v3]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v3": starButton]))
-
+    
+        
+        imageAuthor.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(10)
+            make.width.equalToSuperview()
+            make.top.equalToSuperview().offset(100)
+        }
+        
+        fullNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(imageAuthor.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(10)
+        }
+        
+        nameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(fullNameLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(10)
+        }
+        
+        starButton.snp.makeConstraints { (make) in
+            make.top.equalTo(nameLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(10)
+        }
     }
 
 }
